@@ -1,3 +1,7 @@
+/// 用户注册页面
+///
+/// 提供账号和密码的注册入口，注册成功后自动跳转回登录页。
+/// 与 [ForgetPwdPage] 共用相同的窗口拖拽栏和 UI 布局风格。
 import 'package:flutter/material.dart';
 import 'http_mgr.dart';
 import 'package:window_manager/window_manager.dart';
@@ -17,6 +21,10 @@ class _RegisterPageState extends State<RegisterPage> {
   Color _tipColor = Colors.redAccent;
   bool _isLoading = false;
 
+  /// 执行注册请求
+  ///
+  /// 校验输入 -> 调用 [HttpMgr.registerUser] -> 成功后返回登录页，
+  /// 失败则显示错误提示
   Future<void> _doRegister() async {
     final account = _accountController.text.trim();
     final password = _passwordController.text.trim();
@@ -200,7 +208,10 @@ class _RegisterPageState extends State<RegisterPage> {
   }
 }
 
-// 辅助组件：自定义窗口操作栏
+/// 自定义窗口操作栏
+///
+/// 与 [forget_pwd_page.dart] 中的 `WindowCaptionArea` 功能一致，
+/// 提供窗口拖拽、最小化和关闭功能。
 class WindowCaptionArea extends StatelessWidget {
   const WindowCaptionArea({super.key});
 
