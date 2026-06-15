@@ -2,7 +2,10 @@
 
 基于 **Flutter + WebRTC** 的跨平台视频会议系统，支持桌面端（Windows / macOS / Linux）、移动端（Android / iOS）以及 Web 端，提供低延迟的实时音视频通话、屏幕共享、文字聊天等功能。
 
+## 相关仓库
 
+- 信令服务端：https://github.com/DongGuZhengHuaJi/SignalingServer
+- API服务端：https://github.com/DongGuZhengHuaJi/APIServer
 
 ---
 
@@ -116,7 +119,7 @@ MeetingProject/
 ### 1. 克隆仓库
 
 ```bash
-git clone https://github.com/DongGuZhengHuaJi/MeetingProject.git
+git clone https://github.com/vito67291-bot/MeetingProject.git
 cd MeetingProject
 ```
 
